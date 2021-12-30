@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'description_place.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,8 +40,11 @@ class MyOtherPage extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
       home: Scaffold(
+        appBar: AppBar(title: Text("Hey trips")),
+        body: const DescriptionPlace(),
+      ),
+      /* home: Scaffold(
         appBar: AppBar(
           title: const Text("Share"),
           actions: <Widget>[
@@ -94,7 +98,7 @@ class MyOtherPage extends StatelessWidget {
           child: Text(
               "Hey, press h to see all commands, and always press r to Hot reload"),
         ),
-      ),
+      ), */
     );
   }
 }
