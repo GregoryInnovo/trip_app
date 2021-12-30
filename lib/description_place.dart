@@ -2,10 +2,24 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DescriptionPlace extends StatelessWidget {
-  const DescriptionPlace({Key? key}) : super(key: key);
+  String namePlace;
+  int stars;
+  String descriptionPlace;
+
+  DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace,
+      {Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final star_half = Container(
+        margin: const EdgeInsets.only(top: 323.0, right: 3.0),
+        child: const Icon(Icons.star_half, color: Color(0xFFf2C611)));
+
+    final star_border = Container(
+        margin: const EdgeInsets.only(top: 323.0, right: 3.0),
+        child: const Icon(Icons.star_border, color: Color(0xFFf2C611)));
+
     final star = Container(
         margin: const EdgeInsets.only(top: 323.0, right: 3.0),
         child: const Icon(Icons.star, color: Color(0xFFf2C611)));
@@ -17,9 +31,9 @@ class DescriptionPlace extends StatelessWidget {
             left: 20.0,
             right: 20.0,
           ),
-          child: const Text(
-            "Diwili Ella",
-            style: TextStyle(
+          child: Text(
+            namePlace,
+            style: const TextStyle(
               fontSize: 30.0,
               fontWeight: FontWeight.w900,
             ),
@@ -30,8 +44,8 @@ class DescriptionPlace extends StatelessWidget {
           star,
           star,
           star,
-          star,
-          star,
+          star_half,
+          star_border,
         ],
       ),
     ]);
@@ -42,9 +56,11 @@ class DescriptionPlace extends StatelessWidget {
           right: 20.0,
           top: 20.0,
         ),
-        child: const Text(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            style: TextStyle(fontWeight: FontWeight.w300)));
+        child: Text(descriptionPlace,
+            style: const TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.w300,
+                color: Color(0xFF56575a))));
 
     return Column(
       children: <Widget>[title_stars, text_description],
