@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'button_purple.dart';
 
 class DescriptionPlace extends StatelessWidget {
   String namePlace;
@@ -27,7 +28,7 @@ class DescriptionPlace extends StatelessWidget {
     final title_stars = Row(children: <Widget>[
       Container(
           margin: const EdgeInsets.only(
-            top: 320.0,
+            top: 330.0,
             left: 20.0,
             right: 20.0,
           ),
@@ -65,7 +66,12 @@ class DescriptionPlace extends StatelessWidget {
                 color: Color(0xFF56575a))));
 
     return Column(
-      children: <Widget>[title_stars, text_description],
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        title_stars,
+        text_description,
+        ButtonPurple("Navigate")
+      ],
     );
   }
 }
