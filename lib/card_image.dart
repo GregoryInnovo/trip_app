@@ -27,5 +27,3 @@ class CardImage extends StatelessWidget {
     return card;
   }
 }
-
-class EgdeInsets {}

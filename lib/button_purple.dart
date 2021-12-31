@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'ListChallenge/list_view_challenge.dart';
 
 class ButtonPurple extends StatelessWidget {
   String buttonText = "Navigate";
@@ -10,8 +11,13 @@ class ButtonPurple extends StatelessWidget {
         margin: const EdgeInsets.only(top: 30.0, left: 20.0, right: 20.0),
         child: InkWell(
             onTap: () {
-              ScaffoldMessenger.of(context)
-                  .showSnackBar(const SnackBar(content: Text("Navegando")));
+              // ScaffoldMessenger.of(context)
+              //     .showSnackBar(const SnackBar(content: Text("Navegando")));
+              Navigator.push(context, MaterialPageRoute<void>(
+                builder: (BuildContext context) {
+                  return const ListViewChallenge();
+                },
+              ));
             },
             child: Container(
                 height: 50.0,
@@ -34,4 +40,20 @@ class ButtonPurple extends StatelessWidget {
                             fontFamily: "Lato",
                             color: Colors.white))))));
   }
+}
+
+class ExampleClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = Path();
+    path.lineTo(0, 220);
+    path.quadraticBezierTo(size.width / 4, 160, size.width / 2, 175);
+    path.quadraticBezierTo(3 / 4 * size.width, 190, size.width, 130);
+    path.lineTo(size.width, 0);
+    path.close();
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }

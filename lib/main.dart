@@ -44,61 +44,6 @@ class MyApp extends StatelessWidget {
           const HeaderAppBar()
         ]),
       ),
-      /* home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Share"),
-          actions: <Widget>[
-            IconButton(
-              icon: const Icon(Icons.navigate_next),
-              tooltip: 'Go to the other page',
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute<void>(
-                  builder: (BuildContext context) {
-                    return Scaffold(
-                      appBar: AppBar(
-                        title: const Text('Foodhy'),
-                        backgroundColor: const Color.fromRGBO(146, 199, 84, 1),
-                      ),
-                      body: Stack(children: <Widget>[
-                        Expanded(
-                          child: Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: MediaQuery.of(context).size.height,
-                              child: FittedBox(
-                                child: Image.network(
-                                    'https://images.unsplash.com/photo-1543362906-acfc16c67564?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80'),
-                                fit: BoxFit.cover,
-                              )),
-                        ),
-                        Expanded(
-                            child: Center(
-                                child: Container(
-                                    width: MediaQuery.of(context).size.width,
-                                    height: 100,
-                                    color:
-                                        const Color.fromRGBO(146, 199, 84, 0.3),
-                                    child: const Center(
-                                      child: Text(
-                                        'We suggest, you decide!',
-                                        style: TextStyle(
-                                            fontSize: 24,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ))))
-                      ]),
-                    );
-                  },
-                ));
-              },
-            )
-          ],
-        ),
-        body: const Center(
-          child: Text(
-              "Hey, press h to see all commands, and always press r to Hot reload"),
-        ),
-      ), */
     );
   }
 }
