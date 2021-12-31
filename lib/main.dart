@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
+import 'review_list.dart';
+import 'gradient_back.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,26 +12,14 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  static const String _title = 'Flutter Code Sample';
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: _title,
-      home: MyOtherPage(),
-    );
-  }
-}
-
-class MyOtherPage extends StatelessWidget {
-  const MyOtherPage({Key? key}) : super(key: key);
-
   static const String descriptionDummy =
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
 // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -44,8 +35,14 @@ class MyOtherPage extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(title: Text("Hey trips")),
-        body: DescriptionPlace("Madrid", 4, descriptionDummy),
+        // appBar: AppBar(title: Text("Hey trips")),
+        body: Stack(children: <Widget>[
+          ListView(children: <Widget>[
+            DescriptionPlace("Madrid", 4, descriptionDummy),
+            const ReviewList(),
+          ]),
+          GradientBack("Popular")
+        ]),
       ),
       /* home: Scaffold(
         appBar: AppBar(
