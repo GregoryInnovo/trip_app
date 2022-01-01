@@ -15,14 +15,17 @@ class CustomAppBar extends StatelessWidget {
             fontWeight: FontWeight.bold,
             fontSize: 30.0),
       ),
-      margin: const EdgeInsets.only(top: 10.0, right: 40.0),
+      margin: const EdgeInsets.only(right: 40.0),
     );
 
     return Stack(
       children: <Widget>[
         ClipPath(
           clipper: HeaderClipper(),
-          child: Container(height: 300, color: Colors.blue),
+          child: Container(
+            height: 120,
+            color: Colors.blue,
+          ),
         ),
         textHeader
       ],

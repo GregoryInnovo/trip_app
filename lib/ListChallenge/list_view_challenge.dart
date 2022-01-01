@@ -10,8 +10,8 @@ class ListViewChallenge extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(elevation: 0.0),
         body: Stack(children: <Widget>[
-          const CustomAppBar(),
           ListView(children: <Widget>[ListUser()]),
+          const CustomAppBar(),
         ]));
   }
 }
