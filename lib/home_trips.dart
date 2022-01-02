@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'description_place.dart';
 import 'review_list.dart';
 import 'header_appbar.dart';
-import 'package:flutter/services.dart';
 
 class HomeTrips extends StatelessWidget {
   static const String descriptionDummy =

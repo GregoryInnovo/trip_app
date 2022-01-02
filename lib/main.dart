@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'foodhy_trips.dart';
+import 'foodhy_trips_cupertino.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: FoodhyTrips());
+        home: FoodhyTripsCupertino());
   }
 }
 
