@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'ListChallenge/list_view_challenge.dart';
+import '../ListChallenge/list_view_challenge.dart';
 
 class ButtonPurple extends StatelessWidget {
   String buttonText = "Navigate";
