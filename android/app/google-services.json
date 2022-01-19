@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "394331668170",
+    "project_id": "foodhytrips",
+    "storage_bucket": "foodhytrips.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394331668170:android:2b8dc78df8fa67cc2a3e33",
+        "android_client_info": {
+          "package_name": "com.example.trip_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "394331668170-n9dogduovpjbed8u5nl63630npfuf0qe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.trip_app",
+            "certificate_hash": "63ccf299b81b472eb45505bf785927eee0eeafed"
+          }
+        },
+        {
+          "client_id": "394331668170-30j0o8boi3mt72vgpcu9f6lvte9trton.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjTEsiJay9FYQdzBUnUNF_pq0jMsMdsJU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "394331668170-30j0o8boi3mt72vgpcu9f6lvte9trton.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
